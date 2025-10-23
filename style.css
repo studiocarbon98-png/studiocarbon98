@@ -1,4 +1,4 @@
-/* Configurações Globais (Reset Básico) */
+/* Configurações Globais e Reset */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -8,133 +8,261 @@ body {
     line-height: 1.6;
 }
 
+h3 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #1c1c1c;
+    border-bottom: 3px solid #FFC300;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* ---------------------------------- */
-/* HERÓI/CABEÇALHO */
+/* HEADER / HERO (Seção Principal) */
 /* ---------------------------------- */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); /* Escurece a imagem de fundo */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/hero-background.jpg');
     background-size: cover;
     background-position: center;
     color: #ffffff;
     text-align: center;
-    padding: 80px 20px;
-    position: relative; /* Para posicionar o conteúdo */
-}
-
-/* Adicionado estilo para o logo */
-.logo {
-    max-width: 150px; /* Ajuste o tamanho do seu logo */
-    height: auto;
-    margin-bottom: 20px;
+    padding: 100px 20px;
+    margin: 0;
+    max-width: none;
 }
 
 .hero-content {
     max-width: 900px;
     margin: 0 auto;
-    position: relative;
-    z-index: 2; /* Garante que o conteúdo fique acima do overlay */
+}
+
+.logo {
+    max-width: 150px; 
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 3.5em;
+    font-size: 3.8em;
     margin-bottom: 5px;
-    color: #FFD700; /* Dourado/Amarelo para destaque */
+    color: #FFC300; 
+    font-weight: 900;
 }
 
 .hero h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: 400;
     margin-top: 0;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #FFD700;
-    display: inline-block;
-    padding-bottom: 5px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
 }
 
 .hero p {
     font-size: 1.1em;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    color: #ccc;
 }
 
 /* ---------------------------------- */
-/* BOTÃO CTA (WHATSAPP) */
+/* BOTÕES E LINKS */
 /* ---------------------------------- */
 .cta-button {
     display: inline-block;
-    background-color: #25D366; /* Cor do WhatsApp */
+    background-color: #25D366; 
     color: #ffffff;
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 18px 35px;
     font-weight: 700;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    font-size: 1.1em;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .cta-button:hover {
     background-color: #128C7E;
+    transform: translateY(-2px);
 }
 
-/* ---------------------------------- */
-/* LINKS SOCIAIS */
-/* ---------------------------------- */
 .social-links a {
-    color: #cccccc;
+    color: #FFC300;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
     font-size: 0.9em;
+    transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: #FFD700;
+    color: #ffffff;
 }
 
 /* ---------------------------------- */
-/* SEÇÃO DE SERVIÇOS */
+/* SEÇÃO DE INTRODUÇÃO E BENEFÍCIOS */
 /* ---------------------------------- */
-.services {
-    padding: 40px 20px;
+.intro-section {
+    background-color: #ffffff;
     text-align: center;
-    max-width: 1000px;
+    padding-top: 40px;
+}
+
+.intro-section p {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+}
+
+.beneficios-list {
+    max-width: 800px;
     margin: 0 auto;
-}
-
-.services h3 {
-    font-size: 2em;
-    margin-bottom: 30px;
-    color: #1c1c1c;
-}
-
-.service-list {
-    display: flex;
-    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
-    justify-content: space-around;
-    gap: 20px; /* Espaçamento entre os itens */
-}
-
-.service-item {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
     padding: 20px;
-    flex: 1;
-    min-width: 280px; /* Garante que os itens não fiquem muito estreitos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: left;
 }
 
-/* Estilo para as imagens dos serviços */
-.service-image {
-    max-width: 100%; /* Garante que a imagem não saia do container */
-    height: 180px; /* Altura fixa para consistência */
-    object-fit: cover; /* Recorta a imagem para preencher o espaço sem distorcer */
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.service-item h4 {
+.beneficios-list h4 {
     color: #1c1c1c;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
     margin-top: 0;
+}
+
+.beneficios-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.beneficios-list li {
+    width: 48%; /* Duas colunas em desktop */
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* ---------------------------------- */
+/* SEÇÃO DE SERVIÇOS DETALHADOS (GRID) */
+/* ---------------------------------- */
+.full-services {
+    background-color: #e8e8e8;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.service-detail-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.service-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-detail-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.service-detail-card h4 {
+    color: #1c1c1c;
+    margin: 15px 15px 10px;
+    font-size: 1.5em;
+    border-bottom: 1px solid #FFC300;
+    padding-bottom: 10px;
+}
+
+.detalhe-conteudo {
+    padding: 0 15px 20px;
+}
+
+.detalhe-conteudo h5 {
+    color: #FFC300;
+    margin: 15px 0 5px;
+    font-size: 1.1em;
+}
+
+.detalhe-conteudo p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.beneficio-destaque {
+    font-weight: 700;
+    color: #007bff; /* Azul para destacar o benefício principal */
+    background-color: #f0f8ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+/* ---------------------------------- */
+/* SERVIÇOS ADICIONAIS */
+/* ---------------------------------- */
+.additional-services {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.complementares-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.complementar-item {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.complementar-item h4 {
+    color: #1c1c1c;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+
+/* ---------------------------------- */
+/* CHAMADA PARA AÇÃO FINAL */
+/* ---------------------------------- */
+.cta-final {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    margin: 0;
+    max-width: none;
+}
+
+.cta-final p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
 /* ---------------------------------- */
@@ -144,37 +272,37 @@ footer {
     background-color: #1c1c1c;
     color: #888888;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
-    font-size: 0.8em;
+    padding: 20px 0;
+    font-size: 0.85em;
+    margin: 0;
+    max-width: none;
 }
 
 /* ---------------------------------- */
-/* RESPONSIVIDADE (PARA CELULAR) */
+/* RESPONSIVIDADE */
 /* ---------------------------------- */
 @media (max-width: 768px) {
-    .hero {
-        padding: 60px 15px;
-    }
-    
     .hero h1 {
-        font-size: 2.5em;
+        font-size: 3em;
     }
     
     .hero h2 {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
     
-    .service-list {
-        flex-direction: column; /* Empilha os serviços em telas pequenas */
-        align-items: center;
+    h3 {
+        font-size: 2em;
     }
 
-    .service-item {
-        min-width: 90%;
+    .beneficios-list ul {
+        flex-direction: column; 
     }
 
-    .logo {
-        max-width: 100px; /* Reduz o logo em telas menores */
+    .beneficios-list li {
+        width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Uma coluna em celular */
     }
 }
