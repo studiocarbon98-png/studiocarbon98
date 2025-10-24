@@ -1,0 +1,32 @@
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+*~
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos de backup
+*.bak
+*.backup
+
+# Node modules (caso use no futuro)
+node_modules/
+
+# Ambientes Python (caso use no futuro)
+venv/
+__pycache__/
+*.pyc
+
+# Documentação local (já está na pasta docs/)
+# Se quiser manter docs/ fora do deploy, descomente:
+# docs/
